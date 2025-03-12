@@ -189,7 +189,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: start;
-  color: var(--orange);
+  color: var(--secondary-gray);
   font-size: 2rem;
 }
 
@@ -322,10 +322,14 @@ h1 {
   align-items: center;
 }
 
+.pytorch{
+  height: 15px;
+  width: 15px;
+}
+
 .skill-bar {
   width: 100%;
 }
-
 
 .bar {
   display: flex;
@@ -334,9 +338,28 @@ h1 {
   background-color: var(--orange);
 }
 
+.section-projeto{
+  background-color: var(--main-white);
+  min-height: 75vh;
+}
+
+
+.titulo-projeto{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top:4rem;
+  font-size: 2rem;
+}
+
+.container-projetos{
+  height: 50vh;
+  width: 100%;
+}
+
 .section-contato {
   background-color: var(--main-black);
-  min-height: 100vh;
+  min-height: 50vh;
 }
 
 .container-contato { 
@@ -352,9 +375,67 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: start;
-  color: var(--orange);
+  color: var(--secondary-gray);
   font-size: 2rem;
 }
+
+.projetos{
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+}
+
+.box-projeto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-projeto > a >img{
+  border-radius: 15px;
+  height: 250px;
+  width: 700px;
+}
+
+/* .camada {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #000);
+  width: 100%;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: height 0.5s;
+  padding: 0 40px;
+}
+
+
+.camada h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.camada p {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.box-projeto > a > .camada:hover{
+  height: 100%;
+}
+.box-projeto > a > img :hover{
+  transform: scale(1.1);
+} */
 
 
 .form-contato {
