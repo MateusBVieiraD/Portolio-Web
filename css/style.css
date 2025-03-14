@@ -1,11 +1,10 @@
 :root {
-  --main-yellow: #ffd100;
-  --secondary-yellow: #ffee32;
   --main-black: #202020;
   --main-gray: #333533;
   --secondary-gray: #d6d6d6;
   --main-white: #f1fafe;
-  --orange: #ffbb00;
+  --main-blue: #8DDBE0;
+  --secondary-blue: #56dcbb;
 }
 
 html {
@@ -48,7 +47,7 @@ body {
 }
 
 .logo {
-  color: var(--orange);
+  color: var(--main-blue);
   font-size: 1.8rem;
 }
 
@@ -63,7 +62,7 @@ body {
 }
 
 .menu a:hover, .menu a.selected {
-  color: var(--orange);
+  color: var(--main-blue);
   text-decoration: underline;
 }
 
@@ -124,7 +123,7 @@ h1 {
 
 .texto {
   font-size: 1.8rem;
-  color: var(--orange);
+  color: var(--main-blue);
 }
 
 .sub-texto {
@@ -134,37 +133,39 @@ h1 {
 }
 
 .btn-skills {
-  border: 1px solid var(--orange);
+  border: 1px solid var(--main-blue);
   margin: 0.3rem;
   padding: 20px 40px;
   border-radius: 50px;
   font-size: 0.8rem;
   background-color: var(--main-white);
-  color: var(--orange);
+  color: var(--main-blue);
   font-family: "Inter";
+  transition: .4s;
 }
 
 .btn-contato {
-  border: 1px solid var(--orange);
-  background-color: var(--orange);
+  border: 1px solid var(--main-blue);
+  background-color: var(--main-blue);
   color: var(--main-white);
   padding: 20px 40px;
   margin: 0.3rem;
   border-radius: 50px;
   font-size: 0.8rem;
   font-family: "Inter";
+  transition: .4s;
 }
 
 .btn-contato:hover {
   transform: scale(1.1);
   background-color: var(--main-white);
-  color: var(--orange);
-  border: 1px solid var(--orange);
+  color: var(--main-blue);
+  border: 1px solid var(--main-blue);
 }
 
 .btn-skills:hover {
   transform: scale(1.1);
-  background-color: var(--orange);
+  background-color: var(--main-blue);
   color: var(--main-white);
 }
 
@@ -177,7 +178,7 @@ h1 {
 
 .social i {
   font-size: 2rem;
-  color: var(--orange);
+  color: var(--main-blue);
 }
 
 .section-sobre {
@@ -185,7 +186,7 @@ h1 {
 }
 
 .titulo {
-  padding: 20px;
+  padding-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -235,8 +236,8 @@ h1 {
 }
 
 .soft-skill-icon {
-  border: 1px var(--orange) solid;
-  background-color: var(--orange);
+  border: 1px var(--main-blue) solid;
+  background-color: var(--main-blue);
   margin-bottom: 10px;
   border-radius: 100%;
   height: 3.5rem;
@@ -335,7 +336,7 @@ h1 {
   display: flex;
   width: 100%;
   height: 30px;
-  background-color: var(--orange);
+  background-color: var(--main-blue);
 }
 
 .section-projeto{
@@ -357,35 +358,13 @@ h1 {
   width: 100%;
 }
 
-.section-contato {
-  background-color: var(--main-black);
-  min-height: 50vh;
-}
-
-.container-contato { 
-  min-height: calc(100vh - 99.2px);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.titulo-contato {
-  padding-top: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  color: var(--secondary-gray);
-  font-size: 2rem;
-}
 
 .projetos{
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
+  gap: 3rem;
   padding: 20px;
 }
 
@@ -393,15 +372,21 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
-.box-projeto > a >img{
-  border-radius: 15px;
+.box-projeto img{
   height: 250px;
   width: 700px;
+  display: block;
+  transform: scale(1.05);
+  transition: transform 0.5s;
 }
 
-/* .camada {
+.camada {
   background: linear-gradient(rgba(0, 0, 0, 0.1), #000);
   width: 100%;
   height: 0;
@@ -423,7 +408,7 @@ h1 {
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 15px;
-  color: #fff;
+  color: var(--main-white);
 }
 
 .camada p {
@@ -433,35 +418,62 @@ h1 {
   line-height: 1.8;
 }
 
-.box-projeto > a > .camada:hover{
+.camada a {
+  color: var(--main-white);
+}
+
+.box-projeto:hover .camada{
   height: 100%;
 }
-.box-projeto > a > img :hover{
+.box-projeto:hover img{
   transform: scale(1.1);
-} */
+}
 
+.section-contato {
+  background-color: var(--main-black);
+  min-height: 50vh;
+}
+
+.container-contato { 
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo-contato {
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  color: var(--secondary-gray);
+  font-size: 2rem;
+}
 
 .form-contato {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #f1fafe;
-  
+  gap: 1rem;
 }
 
 .info-contato {
+  width: 60%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  padding: 20px 0px;
+  gap: 1rem;
   
 }
 
 .info-contato input {
- width: 100%;
+  width: 65%;
   height: 50px;
   background-color: var(--secondary-gray);
   border: 0;
@@ -479,7 +491,6 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 60%;
-  margin-bottom: 10px;
 }
 
 .input-mensagem textarea {
@@ -494,26 +505,25 @@ h1 {
 }
 
 .btn-enviar {
-  width: 40%;
-  border: 1px solid var(--orange);
-  background-color: var(--orange);
+  width: 25%;
+  border: 1px solid var(--main-blue);
+  background-color: var(--main-blue);
   color: var(--main-white);
   padding: 10px 40px;
-  margin-bottom: 0.3rem;
   border-radius: 8px;
   font-size: 1rem;
+  transition: .4s;
   font-family: "Inter";
 }
 
 .btn-enviar:hover{
-  transform: scale(1.1);
-  
+  transform: scale(1.01);
 }
 
 footer{
   display: flex;
   align-items: center;
-  background-color: var(--orange);
+  background-color: var(--main-blue);
   color: var(--main-white);
   padding: 10px 20px;
 }
@@ -549,13 +559,14 @@ footer{
   }
 }
 
-@media (max-height: 620px) and (max-width:1500px){
 
+@media (max-height: 620px) and (max-width:1500px){
+  
   .inicio img{
     width: 250px;
     height: 250px;
   }
-
+  
   #inicio{
     min-height: 50vh;
   }
@@ -564,12 +575,12 @@ footer{
     gap: .5rem;
     padding: 0;
   }
- 
+  
   .apresentacao p{
     padding: 5px 0;
-
+    
   }
-
+  
   .primeira-linha{
     font-size: 1rem;
   }
@@ -584,18 +595,24 @@ footer{
     padding: 5px 0;
     
   }
-
+  
   .btn-contato{
     padding: 10px 20px;
   }
   
   .btn-skills{
     padding: 10px 20px;
-
+    
   }
-
+  
   .social{
     padding: 0;
+  }
+}
+
+@media (max-width: 1300px) {
+  .projetos{
+    flex-direction: column;
   }
 }
 
@@ -623,6 +640,11 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .box-projeto img{
+    height: 125px;
+    width: 300px;
   }
   
   .info-contato{
@@ -722,6 +744,13 @@ footer{
   .skill-info{
     width: 100%;
   }
+
+  .info-contato{
+    width: 100%;
+  }
+  .info-contato input{
+    width: 80%;
+  }
   
   .input-mensagem {
     width: 100%;
@@ -731,7 +760,7 @@ footer{
   }
   
   .btn-enviar{
-    width: 80%;
+    width: 50%;
   }
 
   .open{

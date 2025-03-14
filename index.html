@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio</title>
-    <link rel="icon" href="img/favicon.ico" />
+    <link rel="icon" href="img/favicon-16x16.png" />
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -28,9 +28,7 @@
 
     <header class="cabecalho" id="cabecalho">
       <div class="logo-site">
-        <a href="#inicio"
-          ><span class="logo">M</span>ateus <span class="logo">V</span>ieira</a
-        >
+        <span class="logo">M</span>ateus <span class="logo">V</span>ieira
       </div>
       <div class="menu">
         <ul>
@@ -63,7 +61,7 @@
             <div class="apresentacao">
               <p class="primeira-linha">Olá, eu sou</p>
               <h1 class="texto">Mateus Vieira</h1>
-              <p class="sub-texto">Web Developer</p>
+              <p class="sub-texto">Data Scientist</p>
               <div class="botoes">
                 <a href="#sobre"
                   ><button class="btn-skills">Habilidades</button></a
@@ -230,17 +228,26 @@
       <div class="container-projetos">
         <div class="projetos">
           <div class="box-projeto">
-            <a href="https://projeto-classificacao-ml.streamlit.app"><img src="img/Captura de tela 2025-03-12 121707.png" alt="" /></a>
-            <!-- <div class="camada">
-              <h3>IA Convolucional de classificação</h3>
-              <a href="https://projeto-classificacao-ml.streamlit.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div> -->
+            <img src="img/Captura de tela 2025-03-14 124557.png" alt="" />
+            <div class="camada">
+              <h3>Meu Portfólio</h3>
+              <a href="https://portifolio-mateusvieira.vercel.app/"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
           </div>
           <div class="box-projeto">
-            <!-- <img src="img/Captura de tela 2025-03-12 121707.png" alt="" />
+            <img
+              class="ia"
+              src="img/Captura de tela 2025-03-12 121707.png"
+              alt=""
+            />
             <div class="camada">
-              <h3></h3>
-            </div> -->
+              <h3>IA Convolucional de classificação</h3>
+              <a href="https://projeto-classificacao-ml.streamlit.app/"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
@@ -284,4 +291,27 @@
     </footer>
     <script src="js/script.js"></script>
   </body>
+
+  <script>
+    let section = document.querySelectorAll("section");
+    let navLinks = document.querySelectorAll("header div a");
+
+    window.onscroll = () => {
+      section.forEach((sec) => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute("id");
+
+        if (top >= offset && top < offset + height) {
+          navLinks.forEach((links) => {
+            links.classList.remove("selected");
+            document
+              .querySelector("header div a[href*=" + id + "]")
+              .classList.add("selected");
+          });
+        }
+      });
+    };
+  </script>
 </html>
