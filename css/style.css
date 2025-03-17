@@ -614,6 +614,11 @@ footer{
   .projetos{
     flex-direction: column;
   }
+
+  .box-projeto img{
+    height: 225px;
+    width: 500px;
+  }
 }
 
 @media (max-width: 825px) {
@@ -640,6 +645,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 3rem;
   }
 
   .box-projeto img{
